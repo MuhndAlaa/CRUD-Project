@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CRUD Project</title>
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <!-- start of header which have title and add button -->
+        <header id="crudTitle" class="p-2 my-3">
+            <h1 class="py-2">CRUD Project</h1>
+            <button id="showProductBtn" class="btn btn-success"><i class="fas fa-plus"></i> Add Product</button>
+        </header>
+
+
+
+        <!-- start of no content section ... display when there's no data  -->
+        <section id="crudNoContent" class="px-2 py-5 my-5">
+            <h2>There's no Data</h2>
+        </section>
+
+
+
+        <!-- start of table section ... display when there's data and the pervious section display none  -->
+        <section id="crudContent" class="p-3 d-none">
+
+            <div class="form-group my-5">
+                <input id="searchProductInput" type="text" class="form-control" placeholder="Search Product ...">
+            </div>
+
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Product No.</th>
+                        <th>Product Name</th>
+                        <th>Product Categeory</th>
+                        <th>Product Price</th>
+                        <th>Product Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </section>
+
+
+
+        <!-- modal section for adding or updating an existing product  -->
+        <section id="showProduct" class="add-product d-none">
+
+            <div class="add-product-content container">
+                <div class="w-100 bg-white shadow rounded p-5">
+
+                    <h2 class="text-center">Product Details</h2>
+
+                    <div class="form-group">
+                        <input id="productName" class="form-control" type="text" placeholder="Product Name">
+                    </div>
+
+                    <div class="form-group">
+                        <input id="productCategeory" class="form-control" type="text" placeholder="Product Categeory">
+                    </div>
+
+                    <div class="form-group">
+                        <input id="productPrice" class="form-control" type="number" placeholder="Product Price">
+                    </div>
+
+                    <div id="modalBtn">
+                        <button id="addProductBtn" class="btn btn-success btn-block">Add Product</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
